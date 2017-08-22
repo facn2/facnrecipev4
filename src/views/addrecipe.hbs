@@ -1,0 +1,29 @@
+<form class="form" action="/addrecipe" method="post">
+  <header class="formheader">Add Recipe</header>
+  <select name="origin" required>
+    <option value=""></option>
+    <option value="Asian">Asian</option>
+    <option value="Arabic">Arabic</option>
+    <option value="Italian">Italian</option>
+    <option value="Mixed">Mixed</option>
+  </select>
+  <label>Title: </label>
+  <textarea class="recipename" type="text" name="name" placeholder="Name of your recipe..." required></textarea>
+  <label>Difficulty: </label>
+  <select name="difficulty" required>
+    <option value=""></option>
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+    <option value="very_hard">Very Hard</option>
+  </select>
+  <label>Time: </label>
+  <input class="" type="number" name="duration" placeholder="Expected time to prepare" required/>minutes
+  <label>Ingredients: </label>
+  <textarea class="ingredients" type="text" name="ingredients" placeholder="Ingredients of your recipe..." required></textarea>
+  <label>Procedure: </label>
+  <textarea class="directions" type="text" name="directions" placeholder="Please add directions" required></textarea>
+  <div class="validation" id="validation"></div>
+  <button class="approve-button" id="approve-button" type="submit" name="submit">Add Recipe</button>
+  <a class="goback-button" id="goback-button" href="/">Go Back</a>
+</form>
