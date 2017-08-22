@@ -26,7 +26,6 @@
     "express": "^4.15.4",
     "express-handlebars": "^3.0.0",
     "jsonwebtoken": "^7.4.2",
-    "pg": "^7.1.0",
     "pg-promise": "^6.5.1",
     "serve-favicon": "^2.4.3"
   },
@@ -34,7 +33,6 @@
     "istanbul": "^0.4.5",
     "nodemon": "^1.11.0",
     "nyc": "^11.1.0",
-    "shot": "^3.4.2",
     "tap-spec": "^4.1.1",
     "tape": "^4.8.0"
   }

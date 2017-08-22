@@ -8,13 +8,5 @@ const herokuDB = {
   ssl: true,
 };
 
-const localDB = {
-  host: 'localhost',
-  port: 5432,
-  database: 'fac-express',
-};
-
-const connection = process.env.NODE_ENV === 'production' ? herokuDB : localDB;
-
-const db = pgp(connection);
+const db = pgp(herokuDB);
 module.exports = db;

@@ -1,12 +1,12 @@
 # Facn Recipe v4.0
 
 
-# FACN Recipe 2.0
+# FACN Recipe 4.0
 The ultimate FACN Recipe app.
 A simple recipe application for members of Founders & Coders community in Nazareth.
 
 ### To get started:
-Click [here]() to use FACN Recipe 2.0.
+Click [here](https://facnrecipev4.herokuapp.com) to use FACN Recipe 4.0.
 
 Or you can clone this repository.
 ```
