@@ -1,7 +1,3 @@
-node_modules/
-config.env
-
-
 # Logs
 logs
 *.log
@@ -102,6 +98,5 @@ Thumbs.db
 node_modules/
 .nyc_output/
 coverage/
-./keys.js
 ./package-lock.json
 ./config.env
