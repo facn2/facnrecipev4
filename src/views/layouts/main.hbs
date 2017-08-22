@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  {{>htmlHead}}
+    <!-- '>' means it is a partial -->
+  <body>
+    {{>header}}
+    <main class="main">
+      {{{body}}}
+      <!-- this is where the views file (views.hbs) -->
+    </main>
+    {{>footer}}
+    <script src="/js/main.js"></script>
+  </body>
+</html>
