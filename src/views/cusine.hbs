@@ -4,7 +4,7 @@
     <section class="main__container--limited-width">
       <h1>{{name}} recipe</h1>
       {{#each cusine}}
-        <a href="/{{this.cuisine}}/{{this.id}}">{{this.title}}</a>
+        <a href="/{{this.id}}">{{this.title}}</a>
         <li>Difficulty:{{this.difficulty}}</li>
         <li>{{this.duration}} minutes</li>
       {{/each}}

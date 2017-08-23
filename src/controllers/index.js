@@ -21,6 +21,7 @@ const error = require('./error');
 const signin = require('./signin');
 const newuser = require('./newuser');
 const newrecipe = require('./newrecipe');
+const recipe = require('./recipe')
 
 
 router.get('/', home);
@@ -28,6 +29,7 @@ router.get('/login', login)
 router.get('/signup', signup);
 router.get('/addrecipe', addrecipe);
 router.get(/^\/(asian|italian|arabic|mixed)$/, cusines);
+router.get('/:id', recipe);
 router.post('/signin', signin);
 router.post('/newuser', newuser);
 router.post('/newrecipe', newrecipe);

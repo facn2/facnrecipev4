@@ -1,0 +1,14 @@
+{{>navbar}}
+<div id="overlay" class="overlay">
+  <div class="container" id="container">
+    <section class="main__container--limited-width">
+      <h1>{{recipe.title}}</h1>
+        <li>Difficulty: {{recipe.difficulty}}</li>
+        <li>{{recipe.duration}} minutes</li>
+        <li>Ingredients: {{recipe.ingredients}}</li>
+        <li>Procedure: {{recipe.procedure}}</li>
+        <li>Kind of cuisine:<a href="/{{recipe.cuisine}}">{{recipe.cuisine}}</a></li>
+        <li><i>Posted by </i>{{recipe.author}}</li>
+    </section>
+  </div>
+</div>

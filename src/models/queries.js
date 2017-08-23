@@ -11,6 +11,11 @@ const findCusines = cusine => {
   return db.query(myQuery, [cusine]);
 }
 
+const findCusinesById = id => {
+  let myQuery = `SELECT recipe.id, recipe.title, recipe.difficulty, recipe.duration, recipe.ingredients, recipe.procedure, recipe.cuisine, users.username AS author FROM recipe JOIN users ON recipe.author_id = users.id WHERE recipe.id = $1`;
+  //take the cusines from that country
+  return db.query(myQuery, [id]);
+}
 
 const signin = (username) => {
   const fetchdbPassword = 'SELECT password FROM users WHERE username = $1';  //query to see if password exists
@@ -33,6 +38,7 @@ const newRecipe = () => {
 
 module.exports = {
   findCusines,
+  findCusinesById,
   signin,
   newUser,
   newRecipe,
