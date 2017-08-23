@@ -59,6 +59,10 @@ As a student/mentor of Founders & Coders based in Nazareth, the user should be a
 - [ ] try login
 - [ ] attempt the stretch goals
 
+present page with recipe titles, difficulty and time
+be able to click on the recipe
+be able to be redirected to the unique recipe page /:cusine/:id
+
 ### Stretch goals
 - be able to 'heart' the recipe
 - Be able to review recipes
