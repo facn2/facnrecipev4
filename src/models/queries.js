@@ -11,6 +11,12 @@ const findCuisines = cuisine => {
   return db.query(myQuery, [cuisine]);
 }
 
+const findLatest = () => {
+  let myQuery = `SELECT * FROM recipe ORDER BY id DESC LIMIT 5`;
+  //take the cusines from that country
+  return db.query(myQuery);
+}
+
 
 const signin = (username) => {
   const fetchdbPassword = 'SELECT password FROM users WHERE username = $1';  //query to see if password exists
@@ -38,5 +44,6 @@ module.exports = {
   signin,
   newUser,
   newRecipe,
-  checkPw
+  checkPw,
+  findLatest
 }
