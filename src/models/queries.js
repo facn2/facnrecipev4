@@ -11,12 +11,17 @@ const findCuisines = cuisine => {
   return db.query(myQuery, [cuisine]);
 }
 
+const findCusinesById = id => {
+  let myQuery = `SELECT recipe.id, recipe.title, recipe.difficulty, recipe.duration, recipe.ingredients, recipe.procedure, recipe.cuisine, users.username AS author FROM recipe JOIN users ON recipe.author_id = users.id WHERE recipe.id = $1`;
+  //take the cusines from that country
+  return db.query(myQuery, [id]);
+}
+
 const findLatest = () => {
   let myQuery = `SELECT * FROM recipe ORDER BY id DESC LIMIT 5`;
   //take the cusines from that country
   return db.query(myQuery);
 }
-
 
 const signin = (username) => {
   const fetchdbPassword = 'SELECT password FROM users WHERE username = $1';  //query to see if password exists
@@ -41,6 +46,7 @@ const newRecipe = (newrecipe) => {
 
 module.exports = {
   findCuisines,
+  findCusinesById,
   signin,
   newUser,
   newRecipe,
