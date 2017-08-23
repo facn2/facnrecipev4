@@ -1,3 +1,7 @@
+const {findLatest} = require('../models/queries');
+
 module.exports = (req, res) => {
-  res.render('home');
+  findLatest()
+  .then(latest => {console.log(latest);res.render('home', {latest})})
+  .catch(err => console.log(err));
 }
