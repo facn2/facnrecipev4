@@ -1,18 +1,22 @@
-<form class="form" action="/signup" method="post">
-  <header class="formheader">Sign Up</header>
-  <label>Name: </label>
-  <input name="name" placeholder="name" required="" type="text">
-  <label>Surname: </label>
-  <input name="surname" placeholder="surname" required="" type="text">
-  <label>Email: </label>
-  <input name="email" placeholder="email@domain.com" required="" type="text">
-  <label>Username: </label>
-  <input name="username" placeholder="At least 6 characters" required="" type="text">
-  <label>Password: </label>
-  <input name="password" placeholder="*********" required="" type="password">
-  <label>Confirm Password: </label>
-  <input name="confirm" placeholder="*********" required="" type="password">
-  <div class="validation" id="validation"></div>
-  <button class="approve-button" id="approve-button" type="submit" name="submit">Sign Up</button>
-  <a class="goback-button" id="goback-button" href="/">Go Back</a>
-</form>
+<div id="overlay" class="overlay">
+  <div class="container" id="container">
+    <form class="form" action="/newuser" method="post">
+      <header class="formheader">Sign Up</header>
+      <label>Name: </label>
+      <input name="name" placeholder="name" required="" type="text">
+      <label>Surname: </label>
+      <input name="surname" placeholder="surname" required="" type="text">
+      <label>Email: </label>
+      <input name="email" placeholder="email@domain.com" required="" type="text">
+      <label>Username: </label>
+      <input name="username" placeholder="At least 6 characters" required="" type="text">
+      <label>Password: </label>
+      <input name="password" placeholder="*********" required="" type="password">
+      <label>Confirm Password: </label>
+      <input name="confirm" placeholder="*********" required="" type="password">
+      <div class="validation" id="validation"></div>
+      <button class="approve-button" id="approve-button" type="submit" name="submit">Sign Up</button>
+      <a class="goback-button" id="goback-button" href="/">Go Back</a>
+    </form>
+  </div>
+</div>

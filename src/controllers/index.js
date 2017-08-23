@@ -4,7 +4,7 @@
 // login '/loging' (post)
 // signup 'signup' (post)
 // cusines '/:cusines' [arabic, italian, asian, mixed]
-// recipe '/:cusine/:id'
+  // recipe '/:cusine/:id'
 // addform '/addrecipe' (post)
 
 const express = require('express');
@@ -18,6 +18,9 @@ const signup = require('./signup');
 const addrecipe = require('./addrecipe');
 const cusines = require('./cusines')
 const error = require('./error');
+const signin = require('./signin');
+const newuser = require('./newuser');
+const newrecipe = require('./newrecipe');
 
 
 router.get('/', home);
@@ -25,6 +28,9 @@ router.get('/login', login)
 router.get('/signup', signup);
 router.get('/addrecipe', addrecipe);
 router.get(/asian|italian|arabic|mixed/, cusines);
+router.post('/signin', signin);
+router.post('/newuser', newuser);
+router.post('/newrecipe', newrecipe);
 // router.get('/:cusine/:id', (req, res) => res.send(`${res.params.id}`));
 // ${req.params.cusines}
 
