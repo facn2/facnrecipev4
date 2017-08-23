@@ -12,7 +12,7 @@ const findCuisines = cuisine => {
 }
 
 const findLatest = () => {
-  let myQuery = `SELECT * FROM recipe ORDER BY id DESC LIMIT 5`;
+  let myQuery = `SELECT recipe.id, recipe.title, recipe.difficulty, recipe.duration, recipe.ingredients, recipe.procedure, recipe.cuisine, users.username AS author FROM recipe JOIN users ON recipe.author_id = users.id ORDER BY recipe.id DESC LIMIT 5`;
   //take the cusines from that country
   return db.query(myQuery);
 }
