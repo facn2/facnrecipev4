@@ -39,7 +39,7 @@ const newRecipe = (newrecipe) => {
 }
 
 module.exports = {
-  findCusines,
+  findCuisines,
   findCusinesById,
   signin,
   newUser,

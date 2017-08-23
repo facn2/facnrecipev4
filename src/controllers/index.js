@@ -28,12 +28,8 @@ router.get('/', home);
 router.get('/login', login)
 router.get('/signup', signup);
 router.get('/addrecipe', addrecipe);
-<<<<<<< HEAD
-router.get(/^\/(asian|italian|arabic|mixed)$/, cusines);
-router.get('/:id', recipe);
-=======
 router.get(/^\/(asian|italian|arabic|mixed)$/, cuisines);
->>>>>>> master
+router.get('/:id', recipe);
 router.post('/signin', signin);
 router.post('/newuser', newuser);
 router.post('/newrecipe', newrecipe);
