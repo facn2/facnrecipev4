@@ -27,7 +27,7 @@ router.get('/', home);
 router.get('/login', login)
 router.get('/signup', signup);
 router.get('/addrecipe', addrecipe);
-router.get(/asian|italian|arabic|mixed/, cusines);
+router.get(/^\/(asian|italian|arabic|mixed)$/, cusines);
 router.post('/signin', signin);
 router.post('/newuser', newuser);
 router.post('/newrecipe', newrecipe);
