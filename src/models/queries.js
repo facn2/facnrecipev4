@@ -24,7 +24,7 @@ const findLatest = () => {
 }
 
 const signin = (username) => {
-  const fetchdbPassword = 'SELECT password FROM users WHERE username = $1';  //query to see if password exists
+  const fetchdbPassword = 'SELECT id, password FROM users WHERE username = $1';  //query to see if password exists
   return db.query(fetchdbPassword, [username])
 }
 
