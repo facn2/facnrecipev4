@@ -39,9 +39,9 @@ const newUser = (input, hashedPw) => {
 }
 
 const newRecipe = (newrecipe) => {
-  const addNewRecipe = `INSERT INTO recipe (title, difficulty, duration, ingredients, procedure, cuisine) VALUES ($1, $2, $3, $4);`;
-  const {title, difficulty, duration, ingredients, directions, cuisine} = newRecipe
-  db.query(addNewRecipe, [title, difficulty, duration, ingredients, directions, cusine])
+  const addNewRecipe = `INSERT INTO recipe (title, difficulty, duration, ingredients, procedure, cuisine) VALUES ($1, $2, $3, $4, $5, $6);`;
+  const {title, difficulty, duration, ingredients, directions, cuisine} = newrecipe
+  return db.query(addNewRecipe, [title, difficulty, duration, ingredients, directions, cuisine])
 }
 
 module.exports = {
