@@ -1,0 +1,14 @@
+{{>navbar}}
+<section class="main__container--limited-width">
+  {{#each cusine}}
+          <h1>{{this.name}} recipes</h1>
+      <li>
+        {{this.title}}
+        {{this.difficulty}}
+        {{this.duration}}
+        {{this.ingredients}}
+        {{this.procedure}}
+        {{this.author}}
+      </li>
+  {{/each}}
+</section>
