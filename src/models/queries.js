@@ -5,10 +5,10 @@ const hashPassword = (password) => {
   return bcrypt.hash(password, 10)
 };
 
-const findCusines = cusine => {
+const findCuisines = cuisine => {
   let myQuery = `SELECT recipe.id, recipe.title, recipe.difficulty, recipe.duration, recipe.ingredients, recipe.procedure, recipe.cuisine, users.username AS author FROM recipe JOIN users ON recipe.author_id = users.id WHERE recipe.cuisine = $1`;
   //take the cusines from that country
-  return db.query(myQuery, [cusine]);
+  return db.query(myQuery, [cuisine]);
 }
 
 
@@ -21,18 +21,20 @@ const checkPw = (password, hashedPw) => {
   return bcrypt.compare(password, hashedPw);
 }
 
-const newUser = (input) => {
-  let insertUser = "INSERT INTO users ( username, password, name, surname, email) VALUES ($1,$2, $3, $4, $5)"
-  const {username, password, name, surname, email} = input;
+const newUser = (input, hashedPw) => {
+  let insertUser = "INSERT INTO users ( username, password, name, surname, email) VALUES ($1,$2, $3, $4, $5)";
+  const {username, name, surname, email} = input;
+  db.query(insertUser, [username, hashedPw, name, surname, email])
 }
 
-const newRecipe = () => {
-
-
+const newRecipe = (newrecipe) => {
+  const addNewRecipe = `INSERT INTO recipe (title, difficulty, duration, ingredients, procedure, cuisine) VALUES ($1, $2, $3, $4);`;
+  const {title, difficulty, duration, ingredients, directions, cuisine} = newRecipe
+  db.query(addNewRecipe, [title, difficulty, duration, ingredients, directions, cusine])
 }
 
 module.exports = {
-  findCusines,
+  findCuisines,
   signin,
   newUser,
   newRecipe,
