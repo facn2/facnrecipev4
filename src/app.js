@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const exphbs = require('express-handlebars');
-
+const bp = require('body-parser');
 const router = require('./controllers/index');
 // const helpers = require('./views/helpers/index');
 
@@ -24,6 +24,7 @@ app.engine(
 app.set('port', process.env.PORT || 3000);
 app.use(favicon(path.join(__dirname, '..', 'public', 'fac.ico')));
 app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(bp.urlencoded({extended: true}));
 app.use(router);
 
 module.exports = app;

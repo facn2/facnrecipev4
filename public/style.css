@@ -14,7 +14,7 @@ main {
 }
 
 body {
-  background-image: url("./assets/backgroundimageMain.jpg");
+  background-image: url("./backgroundimageMain.jpg");
   background-size: cover;
   overflow: scroll;
 }
