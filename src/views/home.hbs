@@ -2,8 +2,16 @@
 <div id="overlay" class="overlay">
   <div class="container" id="container">
     <section class="main__container--limited-width">
-      <h1 class="main__title">Body</h1>
-      <p>Body paragraph</p>
+      <h1>Latest recipe</h1>
+      <ul>
+        {{#each latest}}
+        <li>
+          <a href="/{{this.id}}">{{this.title}}</a>
+          <li>Difficulty:{{this.difficulty}}</li>
+          <li>{{this.duration}} minutes</li>
+        </li>
+        {{/each}}
+      </ul>
     </section>
   </div>
 </div>
