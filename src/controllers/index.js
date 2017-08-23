@@ -24,7 +24,7 @@ router.get('/', home);
 router.get('/login', login)
 router.get('/signup', signup);
 router.get('/addrecipe', addrecipe);
-router.get(/asian|italian|arabic|mixed/, cusines);
+router.get(/^\/(asian|italian|arabic|mixed)$/, cusines);
 // router.get('/:cusine/:id', (req, res) => res.send(`${res.params.id}`));
 // ${req.params.cusines}
 
