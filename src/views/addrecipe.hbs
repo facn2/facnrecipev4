@@ -1,7 +1,7 @@
 {{>navbar}}
 <div id="overlay" class="overlay">
   <div class="container" id="container">
-    <form class="form" action="/addrecipe" method="post">
+    <form class="form" action="/newrecipe" method="post">
       <header class="formheader">Add Recipe</header>
       <label>Title: </label>
       <textarea class="recipename" type="text" name="title" placeholder="Name of your recipe..." required></textarea>
@@ -10,7 +10,7 @@
       <label>Procedure: </label>
       <textarea class="directions" type="text" name="directions" placeholder="Please add directions" required></textarea>
       <label>Origin: </label>
-      <select name="cusine" required>
+      <select name="cuisine" required>
         <option value=""></option>
         <option value="asian">Asian</option>
         <option value="arabic">Arabic</option>
