@@ -5,6 +5,7 @@ const exphbs = require('express-handlebars');
 const bp = require('body-parser');
 const router = require('./controllers');
 const helpers = require('./views/helpers/index');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.set('port', process.env.PORT || 3000);
 app.use(favicon(path.join(__dirname, '..', 'public', 'fac.ico')));
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(bp.urlencoded({extended: true}));
+app.use(cookieParser());
 app.use(router);
 
 module.exports = app;

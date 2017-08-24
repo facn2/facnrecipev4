@@ -12,12 +12,13 @@ const signin = require('./signin');
 const newuser = require('./newuser');
 const newrecipe = require('./newrecipe');
 const recipe = require('./recipe');
+const {checkCookie} = require('../models/token');
 
 router.get('/', home);
 router.get('/login', login);
 router.get('/signup', signup);
-router.get('/addrecipe', addrecipe);
-router.get(/^\/(asian|italian|arabic|mixed)$/, cuisines);
+router.get('/addrecipe', checkCookie, addrecipe);
+router.get(/^\/(asian|italian|arabic|mixed)$/, checkCookie, cuisines);
 router.get('/:id', recipe);
 router.post('/signin', signin);
 router.post('/newuser', newuser);

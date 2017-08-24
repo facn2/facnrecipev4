@@ -31,9 +31,9 @@ INSERT INTO users (username, password, name, surname, email) VALUES
 ('jbond', '$2a$10$UcORsLgChmFC8UPlqoOJluX8IU0yccwL.zfP2hrUPWwWCDiV8y9LW', 'James', 'Bond', 'james@bond.com');
 
 INSERT INTO recipe (title, difficulty, duration, ingredients, procedure, cuisine, author_id) VALUES
-('Falafel', 'hard', 20, '1 pound (about 2 cups) dry chickpeas/garbanzo beans - you must start with dry', 'garbanzo, salt, cumin', 'Arabic', 5),
-('Sushi', 'hard', 40, 'Salmon or tuna, nori paper, cucumber', 'roll fish in nori paper and you are done', 'Asian', 2),
-('Pasta', 'easy', 15, 'Bag of pasta, water, salt', 'Boil water, add 3 tablespoons of salt, add pasta and cook', 'Italian', 3),
-('Black beans with lime and coriander rice, fried peppers and tomato salad', 'medium', 30, 'For the beans: one bag of dry black beans (from the nut shop); 2 large sweet oranges; 2 onions', 'For the beans: (Time estimate: 3 hours) rinse dry beans and add them to a large pan; Serve hot', 'Mixed', 4);
+('Falafel', 'hard', 20, '1 pound (about 2 cups) dry chickpeas/garbanzo beans - you must start with dry', 'garbanzo, salt, cumin', 'arabic', 5),
+('Sushi', 'hard', 40, 'Salmon or tuna, nori paper, cucumber', 'roll fish in nori paper and you are done', 'asian', 2),
+('Pasta', 'easy', 15, 'Bag of pasta, water, salt', 'Boil water, add 3 tablespoons of salt, add pasta and cook', 'italian', 3),
+('Black beans with lime and coriander rice, fried peppers and tomato salad', 'medium', 30, 'For the beans: one bag of dry black beans (from the nut shop); 2 large sweet oranges; 2 onions', 'For the beans: (Time estimate: 3 hours) rinse dry beans and add them to a large pan; Serve hot', 'mixed', 4);
 
 COMMIT;
