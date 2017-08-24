@@ -5,13 +5,13 @@
       <h2 class="recipe-title" id="recipe-title">Latest recipes</h2>
       <ul>
         {{#each latest}}
-        <div class="recipe-box">
-          <li>
-            <a href="/{{this.id}}">{{this.title}}</a>
-            <li>Difficulty: {{this.difficulty}}</li>
-            <li>{{this.duration}} minutes</li>
-          </li>
-        </div>
+          <div class="recipe-box">
+            <li>
+              <a href="/{{this.id}}">{{this.title}}</a>
+              <li>Difficulty: {{this.difficulty}}</li>
+              <li>{{this.duration}} minutes</li>
+            </li>
+          </div>
         {{/each}}
       </ul>
     </section>

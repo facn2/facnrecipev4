@@ -14,7 +14,7 @@ const newrecipe = require('./newrecipe');
 const recipe = require('./recipe');
 
 router.get('/', home);
-router.get('/login', login)
+router.get('/login', login);
 router.get('/signup', signup);
 router.get('/addrecipe', addrecipe);
 router.get(/^\/(asian|italian|arabic|mixed)$/, cuisines);

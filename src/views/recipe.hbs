@@ -1,14 +1,16 @@
 {{>navbar}}
 <div id="overlay" class="overlay">
   <div class="container" id="container">
-    <section class="main__container--limited-width">
-      <h1>{{recipe.title}}</h1>
-        <li>Difficulty: {{recipe.difficulty}}</li>
+    <section class="" id="latest">
+      <h2 class="recipe-title" id="recipe-title">{{recipe.title}}</h2>
+      <div class="singlerecipe">
+        <li><strong>Level:</strong> {{recipe.difficulty}}</li>
         <li>{{recipe.duration}} minutes</li>
-        <li>Ingredients: {{recipe.ingredients}}</li>
-        <li>Procedure: {{recipe.procedure}}</li>
-        <li>Kind of cuisine:<a href="/{{recipe.cuisine}}">{{recipe.cuisine}}</a></li>
+        <li><strong>Ingredients:</strong> {{recipe.ingredients}}</li>
+        <li><strong>Procedure:</strong> {{recipe.procedure}}</li>
+        <li>Kind of cuisine: <a href="/{{recipe.cuisine}}">{{capitalise recipe.cuisine}}</a></li>
         <li><i>Posted by </i>{{recipe.author}}</li>
+      </div>
     </section>
   </div>
 </div>

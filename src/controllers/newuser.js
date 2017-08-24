@@ -1,7 +1,6 @@
 const {hashPassword, newUser} = require('../models/queries');
 
 module.exports = (req, res) => {
-  console.log(req.body);
   hashPassword(req.body.password)
   .then(hashedPw => {
     if (req.body.name.length < 3) throw new Error('Name is too short')
