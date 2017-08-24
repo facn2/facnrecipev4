@@ -13,7 +13,6 @@ module.exports = (req, res) => {
   })
   .then(trueorfalse => {
     if (trueorfalse) {
-      console.log(userId);
       setToken(req, res, userId, req.body.username);
     }
     else throw new Error('Incorrect password');

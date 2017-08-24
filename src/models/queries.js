@@ -10,21 +10,21 @@ const checkPw = (password, hashedPw) => {
 };
 
 const findCuisines = cuisine => {
-  let myQuery = 'SELECT recipe.id, recipe.title, recipe.difficulty, recipe.duration, recipe.ingredients, recipe.procedure, recipe.cuisine, users.username AS author FROM recipe JOIN users ON recipe.author_id = users.id WHERE recipe.cuisine = $1';
+  const fetchdbCusines = 'SELECT recipe.id, recipe.title, recipe.difficulty, recipe.duration, recipe.ingredients, recipe.procedure, recipe.cuisine, users.username AS author FROM recipe JOIN users ON recipe.author_id = users.id WHERE recipe.cuisine = $1';
   //take the cusines from that country
-  return db.query(myQuery, [cuisine]);
+  return db.query(fetchdbCusines, [cuisine]);
 };
 
 const findCusinesById = id => {
-  let myQuery = 'SELECT recipe.id, recipe.title, recipe.difficulty, recipe.duration, recipe.ingredients, recipe.procedure, recipe.cuisine, users.username AS author FROM recipe JOIN users ON recipe.author_id = users.id WHERE recipe.id = $1';
+  const fetchdbCusines = 'SELECT recipe.id, recipe.title, recipe.difficulty, recipe.duration, recipe.ingredients, recipe.procedure, recipe.cuisine, users.username AS author FROM recipe JOIN users ON recipe.author_id = users.id WHERE recipe.id = $1';
   //take the cusines by id
-  return db.query(myQuery, [id]);
+  return db.query(fetchdbCusines, [id]);
 };
 
 const findLatest = () => {
-  let myQuery = 'SELECT recipe.id, recipe.title, recipe.difficulty, recipe.duration, recipe.ingredients, recipe.procedure, recipe.cuisine, users.username AS author FROM recipe JOIN users ON recipe.author_id = users.id ORDER BY recipe.id DESC LIMIT 5';
+  const fetchdbLatest = 'SELECT recipe.id, recipe.title, recipe.difficulty, recipe.duration, recipe.ingredients, recipe.procedure, recipe.cuisine, users.username AS author FROM recipe JOIN users ON recipe.author_id = users.id ORDER BY recipe.id DESC LIMIT 5';
   //take the latest recipes added
-  return db.query(myQuery);
+  return db.query(fetchdbLatest);
 };
 
 const signin = (username) => {
@@ -34,7 +34,7 @@ const signin = (username) => {
 };
 
 const newUser = (input, hashedPw) => {
-  let insertUser = 'INSERT INTO users ( username, password, name, surname, email) VALUES ($1,$2, $3, $4, $5)';
+  const insertUser = 'INSERT INTO users ( username, password, name, surname, email) VALUES ($1,$2, $3, $4, $5)';
   const {username, name, surname, email} = input;
   db.query(insertUser, [username, hashedPw, name, surname, email]);
 };

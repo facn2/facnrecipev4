@@ -1,6 +1,5 @@
 const {sign, verify} = require('jsonwebtoken');
 
-
 const setToken = (req, res, userId, username) => {
   const userDetails = {
     is_loggedin: true,
@@ -18,19 +17,15 @@ const setToken = (req, res, userId, username) => {
 const checkCookie = (req, res, next) => {
   let token;
   let login;
-  const {session_id} = req.cookies;
-  console.log('session_id: ', session_id);
+  const { session_id } = req.cookies;
   if (session_id) {
     try {
       token = verify(session_id, process.env.SECRET);
-    }
-    catch(err) {
+    } catch (err) {
       res.render('notloggedin') //render
     }
     next();
-  }
-  else res.render('notloggedin')
-
+  } else res.render('notloggedin')
 }
 
 module.exports = {
