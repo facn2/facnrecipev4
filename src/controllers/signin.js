@@ -16,7 +16,8 @@ module.exports = (req, res) => {
       console.log(userId);
       setToken(req, res, userId, req.body.username);
     }
-    else throw new Error('Incorrect password')
+    else throw new Error('Incorrect password');
   })
   .catch(err => res.send(err.message))
+  // .then(res.redirect('/'))
 }

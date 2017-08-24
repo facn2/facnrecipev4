@@ -19,11 +19,12 @@ CREATE TABLE IF NOT EXISTS recipe (
   ingredients   TEXT          NOT NULL,
   procedure     TEXT          NOT NULL,
   cuisine       TEXT          NOT NULL,
-  author_id     INTEGER       REFERENCES users(id) ON UPDATE cascade
+  author_id     INTEGER       REFERENCES users(id) ON UPDATE cascade DEFAULT 2
 );
 
 INSERT INTO users (username, password, name, surname, email) VALUES
 ('admin', '$2a$10$UcORsLgChmFC8UPlqoOJluX8IU0yccwL.zfP2hrUPWwWCDiV8y9LW', 'Facn', 'Admin', 'admin@facn.com'),
+('anonymous', '$2a$10$UcORsLgChmFC8UPlqoOJluX8IU0yccwL.zfP2hrUPWwWCDiV8y9LW', 'anon', 'anon', 'anon@facn.com'),
 ('rinoma', '$2a$06$XzaqxfEvjH.LqhNRVngXGeg/KO0/SFK83Sq44g.tMG9FzGfMDIZpW', 'Rinoma', 'Something', 'stefano@rinoma.com'),
 ('momo', '$2a$10$UcORsLgChmFC8UPlqoOJluX8IU0yccwL.zfP2hrUPWwWCDiV8y9LW', 'Mohammed', 'Something', 'moh@mmed.com'),
 ('kingkong', '$2a$10$UcORsLgChmFC8UPlqoOJluX8IU0yccwL.zfP2hrUPWwWCDiV8y9LW', 'King', 'Kong', 'king@kong.com'),

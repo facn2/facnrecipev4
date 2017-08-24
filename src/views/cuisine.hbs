@@ -1,13 +1,19 @@
 {{>navbar}}
 <div id="overlay" class="overlay">
   <div class="container" id="container">
-    <section class="main__container--limited-width">
-      <h1>{{name}} recipe</h1>
-      {{#each cuisine}}
-        <a href="/{{this.id}}">{{this.title}}</a>
-        <li>Difficulty:{{this.difficulty}}</li>
-        <li>{{this.duration}} minutes</li>
-      {{/each}}
+    <section class="" id="latest">
+      <h2 class="recipe-title" id="recipe-title">{{capitalise name}} recipes</h2>
+      <ul>
+        {{#each cuisine}}
+          <div class="recipe-box">
+            <li>
+            <a href="/{{this.id}}">{{this.title}}</a>
+            <li>Difficulty: {{this.difficulty}}</li>
+            <li>{{this.duration}} minutes</li>
+          </li>
+        </div>
+        {{/each}}
+      </ul>
     </section>
   </div>
 </div>
