@@ -332,3 +332,19 @@ select {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.error__desc {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.error__image {
+  width: 600px;
+}

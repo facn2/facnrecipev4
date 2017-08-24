@@ -18,6 +18,6 @@ module.exports = (req, res) => {
     }
     else throw new Error('Incorrect password');
   })
-  .then(res.redirect('/'))
   .catch(err => res.send(err.message))
+  // .then(res.redirect('/'))
 }
