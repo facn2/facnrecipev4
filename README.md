@@ -42,7 +42,7 @@ As a student/mentor of Founders & Coders based in Nazareth, the user should be a
 
 ### Wireframe & Architecture
 
-![](./wireframe.png)
+![](./wireframe.jpg)
 
 ### To do list:   
 - [x] create repository
