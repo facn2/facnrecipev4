@@ -10,7 +10,10 @@ module.exports = (req, res) => {
     else if (req.body.username.length < 6) throw new Error('Username is too short')
     else if (req.body.password.length < 8) throw new Error('Password is too short')
     else if (req.body.password !== req.body.confirm) throw new Error('Passwords don\'t match')
-    else newUser(req.body, hashedPw);
+    else {
+      newUser(req.body, hashedPw);
+      res.redirect('/');
+    }
   })
   .catch(err => res.send(err.message))
   // .then(res.redirect('/'))
