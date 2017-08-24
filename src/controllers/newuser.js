@@ -16,5 +16,4 @@ module.exports = (req, res) => {
     }
   })
   .catch(err => res.send(err.message))
-  // .then(res.redirect('/'))
 }

@@ -36,7 +36,7 @@ const signin = (username) => {
 const newUser = (input, hashedPw) => {
   let insertUser = 'INSERT INTO users ( username, password, name, surname, email) VALUES ($1,$2, $3, $4, $5)';
   const {username, name, surname, email} = input;
-  return db.query(insertUser, [username, hashedPw, name, surname, email]);
+  db.query(insertUser, [username, hashedPw, name, surname, email]);
 };
 
 const newRecipe = (newrecipe) => {

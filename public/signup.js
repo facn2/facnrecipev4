@@ -1,5 +1,4 @@
 document.querySelector('.form').addEventListener('input', function(e) {
-  e.preventDefault();
   const name = document.getElementById('name').value;
   const surname = document.getElementById('surname').value;
   const email = document.getElementById('email').value;
