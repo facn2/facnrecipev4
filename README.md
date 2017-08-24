@@ -22,6 +22,7 @@ npm run devStart
 ```
 
 ### User story:
+We need to have an app where users need to upload recipes and other users can see those recipes.
 As a student/mentor of Founders & Coders based in Nazareth, the user should be able to...
 + login securely to the app
 + create a new recipe
@@ -32,36 +33,32 @@ As a student/mentor of Founders & Coders based in Nazareth, the user should be a
 ### Schema
 **recipes**
 
-| id  | recipe_name    | ingredients | directions | origin | user_id |
-| --- | ------------ | ------ | -------- | ------- | ------- |
+| id  | title    | difficulty | duration |ingredients | procedure | cuisine | author_id |
+| --- | -------- | ---------- |--------- | ---------- | --------- | ------- | --------- |
 
 **users**
 
 | id  |  username | password | name | surname | email |
-| --- |:-----:|:-----:|:-----:|:-------:|:-----:|
+| --- | --------- | -------- | ---- | ------- | ----- |
 
 
-### Wireframe
+### Wireframe & Architecture
 
-
-
-### Architecture
 
 
 
 ### To do list:   
 - [x] create repository
-- [ ] create file structure
+- [x] create file structure
 - [x] create wireframe
-- [ ] write this beautiful readme
-- [ ] create the database
-- [ ] create the login and sign up forms
-- [ ] try login
+- [x] write this beautiful readme
+- [x] create the database
+- [x] create the login and sign up forms
+- [x] try login
+- [x] present page with recipe titles, difficulty and time
+- [x] be able to click on the recipe
+- [x] be able to be redirected to the unique recipe page /:id
 - [ ] attempt the stretch goals
-
-present page with recipe titles, difficulty and time
-be able to click on the recipe
-be able to be redirected to the unique recipe page /:cusine/:id
 
 ### Stretch goals
 - be able to 'heart' the recipe
