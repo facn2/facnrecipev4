@@ -1,7 +1,5 @@
-# Facn Recipe v4.0
-
-
 # FACN Recipe 4.0
+
 The ultimate FACN Recipe app.
 A simple recipe application for members of Founders & Coders community in Nazareth.
 
@@ -44,8 +42,7 @@ As a student/mentor of Founders & Coders based in Nazareth, the user should be a
 
 ### Wireframe & Architecture
 
-
-
+![](./wireframe.png)
 
 ### To do list:   
 - [x] create repository
